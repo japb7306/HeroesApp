@@ -1,10 +1,8 @@
- 
 <div fxLayout="column">
     <div>
         <h1>Buscador de Héroes</h1>
         <mat-divider></mat-divider>
     </div>
-
     <div fxLayout="column">
         <h3>Buscador</h3>
         <mat-form-field>
@@ -27,9 +25,24 @@
     <div>
         <pre>{{heroeSeleccionado | json}}</pre>
     </div>
+
     <div *ngIf="heroeSeleccionado">
         <app-heroe-tarjeta [heroe]="heroeSeleccionado"></app-heroe-tarjeta>
     </div>
-</div>
-    
 
+</div>
+
+<div>
+    <h3>Buscador</h3>
+
+    <mat-form-field class="example-full-width">
+        <input type="text" placeholder="Pick One" aria-label="Number" , matInput [(ngModel)]="termino" matInput [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let heroe of heroes" [value]="heroe">
+                {{heroe.superhero}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+
+</div>
+</div>
