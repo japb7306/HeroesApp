@@ -19,6 +19,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
+<<<<<<< HEAD
+=======
+    MatInputModule,
+>>>>>>> 5cda4d0f56183652b654b19e41e485cfad858853
     MatGridListModule,
     MatIconModule,
     MatInputModule,
@@ -26,8 +30,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatProgressSpinnerModule,
     MatSelectModule,
     MatSidenavModule,
-    MatToolbarModule
-    
+    MatToolbarModule    
   ]
 })
 
